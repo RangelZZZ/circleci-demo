@@ -1,9 +1,9 @@
 version: 2
-machine:
-  node:
-    version: 8.4.0
 jobs:
   build:
+    machine:
+        node:
+          version: 0.10.22
     steps:
       - run:
           name: test
