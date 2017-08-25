@@ -1,0 +1,26 @@
+{
+  "name": "circleci-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.8.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RangelZZZ/circleci-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RangelZZZ/circleci-demo/issues"
+  },
+  "homepage": "https://github.com/RangelZZZ/circleci-demo#readme"
+}
