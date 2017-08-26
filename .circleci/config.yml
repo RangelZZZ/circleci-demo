@@ -1,10 +1,28 @@
 version: 2
 jobs:
   build:
-    machine:
-        node:
-          version: 0.10.22
+      working_directory: ~/mern-starter
+      docker:
+        - image: circleci/node:8.4.2
+      steps:
+        - checkout
+        - run:
+            name: Update npm
+            command: 'sudo npm install -g npm@latest'
+        - restore_cache:
+            key: dependency-cache-{{ checksum "package.json" }}
+        - run:
+            name: Install npm wee
+            command: npm install
+        - save_cache:
+            key: dependency-cache-{{ checksum "package.json" }}
+            paths:
+              - node_modules
   test:
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - checkout
       - run:
-          name: intall
+          name: Test
           command: npm test
